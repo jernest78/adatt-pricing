@@ -114,7 +114,7 @@ export default function PricingPage() {
 				<div className="grid md:grid-cols-2 gap-10 items-center">
 					<div>
 						<h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-							15-minute secure offboarding for AD + Exchange
+							30-secondsecure offboarding for AD + Exchange Online user
 						</h1>
 						<p className="mt-4 text-slate-300">
 							A PowerShell GUI that removes risk fast: group cleanup, GAL hide,
