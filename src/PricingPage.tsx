@@ -138,7 +138,7 @@ export default function PricingPage() {
 					</div>
 					<div className="rounded-2xl bg-slate-900/40 p-6 ring-1 ring-white/10">
 						<img 
-							src="/adatt-screenshot.png" 
+							src="/adatt-screenshot.PNG" 
 							alt="ADATT Application Interface" 
 							className="rounded-lg w-full shadow-xl"
 						/>
