@@ -137,14 +137,11 @@ export default function PricingPage() {
 						</div>
 					</div>
 					<div className="rounded-2xl bg-slate-900/40 p-6 ring-1 ring-white/10">
-						<ul className="grid gap-3 text-sm text-slate-300">
-							<li>• Verify admin + modules (AD, Graph, Exchange)</li>
-							<li>• Remove groups except Domain Users; clear manager</li>
-							<li>• Hide from GAL; convert mailbox to Shared</li>
-							<li>• Auto-reply editor (internal/external)</li>
-							<li>• Remove devices + MFA methods via Graph</li>
-							<li>• Append description; disable account; log actions</li>
-						</ul>
+						<img 
+							src="/adatt-screenshot.png" 
+							alt="ADATT Application Interface" 
+							className="rounded-lg w-full shadow-xl"
+						/>
 					</div>
 				</div>
 			</section>
