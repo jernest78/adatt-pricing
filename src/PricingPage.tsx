@@ -121,6 +121,9 @@ export default function PricingPage() {
 							mailbox to shared, auto-reply, Graph device & MFA removal, plus audit
 							logging.
 						</p>
+						<p className="mt-4 text-lg text-slate-200 font-medium">
+							ADATT simplifies complex Active Directory and Microsoft 365 user management tasks, saving IT teams hours of manual work while ensuring consistent, compliant, and auditable user termination processes.
+						</p>
 						<div className="mt-6 flex flex-wrap gap-3">
 							<a
 								href="#pricing"
