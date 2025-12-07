@@ -143,7 +143,7 @@ export default function PricingPage() {
 						<img 
 							src="/adatt-screenshot.PNG" 
 							alt="ADATT Application Interface" 
-							className="rounded-lg w-full shadow-xl"
+							className="rounded-lg w-full shadow-xl transition-transform duration-300 hover:scale-105 cursor-pointer"
 						/>
 					</div>
 				</div>
