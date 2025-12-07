@@ -197,7 +197,7 @@ export default function PricingPage() {
 						Multi-forest/tenant, SSO packaging, custom policies. From $2,499/yr.
 					</p>
 					<a
-						href="mailto:sales@yourdomain.com?subject=ADATT%20Enterprise"
+						href="mailto:adatt@unifosec.com?subject=ADATT%20Enterprise"
 						className="mt-3 inline-block rounded-xl px-4 py-2 ring-1 ring-slate-600/60 hover:ring-slate-400/80"
 					>
 						Talk to sales
