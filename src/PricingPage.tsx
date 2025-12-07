@@ -139,11 +139,13 @@ export default function PricingPage() {
 							</a>
 						</div>
 					</div>
-					<div className="rounded-2xl bg-slate-900/40 p-6 ring-1 ring-white/10">
+					<div className="rounded-2xl bg-slate-900/40 p-6 ring-1 ring-white/10 overflow-hidden">
 						<img 
 							src="/adatt-screenshot.PNG" 
 							alt="ADATT Application Interface" 
 							className="rounded-lg w-full shadow-xl transition-transform duration-300 hover:scale-105 cursor-pointer"
+							style={{ imageRendering: 'crisp-edges' }}
+							loading="eager"
 						/>
 					</div>
 				</div>
