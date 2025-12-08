@@ -77,24 +77,24 @@ export default function PricingPage() {
 
 	return (
 		<div className="min-h-screen bg-gradient-to-b from-[#0E2430] to-[#102F3C] text-slate-100">
-			<header className="mx-auto max-w-6xl px-6 py-10">
-				<div className="flex items-center justify-between">
+			<header className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+				<div className="flex items-center justify-between flex-wrap gap-4">
 					<div className="flex items-center gap-3">
 						<div className="h-10 w-10 rounded-2xl bg-[#4F46E5]/10 ring-1 ring-[#4F46E5]/30 grid place-content-center">
 							🔐
 						</div>
 						<div className="text-xl font-semibold tracking-tight">ADATT</div>
 					</div>
-					<nav className="flex items-center gap-2">
+					<nav className="flex items-center gap-2 flex-wrap">
 						<a
 							href="#pricing"
-							className="rounded-xl px-4 py-2 ring-1 ring-slate-600/60 hover:ring-slate-400/80"
+							className="rounded-xl px-3 sm:px-4 py-2 text-sm sm:text-base ring-1 ring-slate-600/60 hover:ring-slate-400/80 transition-all"
 						>
 							Pricing
 						</a>
 						<a
 							href="#faq"
-							className="rounded-xl px-4 py-2 ring-1 ring-slate-600/60 hover:ring-slate-400/80"
+							className="rounded-xl px-3 sm:px-4 py-2 text-sm sm:text-base ring-1 ring-slate-600/60 hover:ring-slate-400/80 transition-all"
 						>
 							FAQ
 						</a>
@@ -102,7 +102,7 @@ export default function PricingPage() {
 							href="https://discord.com/channels/1422930170968543244/1422930171836502018"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="rounded-xl px-4 py-2 ring-1 ring-slate-600/60 hover:ring-slate-400/80"
+							className="rounded-xl px-3 sm:px-4 py-2 text-sm sm:text-base ring-1 ring-slate-600/60 hover:ring-slate-400/80 transition-all"
 						>
 							Discord
 						</a>
@@ -110,36 +110,36 @@ export default function PricingPage() {
 				</div>
 			</header>
 
-			<section className="mx-auto max-w-6xl px-6 pb-6">
-				<div className="grid md:grid-cols-2 gap-10 items-center">
-					<div>
-						<h1 className="text-4xl md:text-5xl font-semibold leading-tight">
+			<section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+				<div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+					<div className="order-2 lg:order-1">
+						<h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
 							30-second secure offboarding for AD + Exchange Online
 						</h1>
-						<p className="mt-4 text-slate-300">
+						<p className="mt-4 text-base sm:text-lg text-slate-300">
 							A PowerShell GUI that removes risk fast: group cleanup, GAL hide,
 							mailbox to shared, auto-reply, Graph device & MFA removal, plus audit
 							logging.
 						</p>
-						<p className="mt-4 text-lg text-slate-200 font-medium">
+						<p className="mt-4 text-base sm:text-lg text-slate-200 font-medium leading-relaxed">
 							ADATT simplifies complex Active Directory and Microsoft 365 user management tasks, saving IT teams hours of manual work while ensuring consistent, compliant, and auditable user termination processes.
 						</p>
 						<div className="mt-6 flex flex-wrap gap-3">
 							<a
 								href="#pricing"
-								className="rounded-xl bg-[#4F46E5] px-5 py-3 font-medium text-slate-100 hover:bg-[#6366F1]"
+								className="rounded-xl bg-[#4F46E5] px-5 py-3 text-sm sm:text-base font-medium text-slate-100 hover:bg-[#6366F1] transition-colors"
 							>
 								View pricing
 							</a>
 							<a
 								href="#how"
-								className="rounded-xl px-5 py-3 ring-1 ring-slate-600/60 hover:ring-slate-400/80"
+								className="rounded-xl px-5 py-3 text-sm sm:text-base ring-1 ring-slate-600/60 hover:ring-slate-400/80 transition-all"
 							>
 								How it works
 							</a>
 						</div>
 					</div>
-					<div className="rounded-2xl bg-slate-900/40 p-2 ring-1 ring-white/10 overflow-hidden">
+					<div className="order-1 lg:order-2 rounded-2xl bg-slate-900/40 p-3 sm:p-4 ring-1 ring-white/10 overflow-hidden">
 						<img 
 							src="/adatt-screenshot.png" 
 							alt="ADATT Application Interface" 
