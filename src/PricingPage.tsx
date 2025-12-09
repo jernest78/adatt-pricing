@@ -1,6 +1,5 @@
 import React from "react";
 import { getPlanHref } from "./checkout";
-import screenshotImg from "./assets/adatt-screenshot.png";
 
 // Moved out of the component and exported for reuse by FaqPage
 export const faqs = [
@@ -142,7 +141,7 @@ export default function PricingPage() {
 					</div>
 					<div className="order-1 lg:order-2 rounded-2xl bg-slate-900/40 p-3 sm:p-4 ring-1 ring-white/10 overflow-hidden">
 						<img 
-							src={screenshotImg} 
+							src="/adatt-screenshot.png" 
 							alt="ADATT Application Interface" 
 							className="rounded-lg w-full shadow-2xl transition-transform duration-300 hover:scale-[1.02] cursor-pointer object-contain"
 							loading="eager"
