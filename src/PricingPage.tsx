@@ -25,7 +25,7 @@ export default function PricingPage() {
 	const tiers = [
 		{
 			name: "Solo Admin",
-			price: 149,
+			price: 99,
 			cadence: "/yr",
 			blurb: "1 operator, 1 AD forest.",
 			features: [
@@ -43,7 +43,7 @@ export default function PricingPage() {
 		},
 		{
 			name: "Team",
-			price: 399,
+			price: 299,
 			cadence: "/yr",
 			blurb: "Up to 5 operators, 1 AD forest.",
 			features: [
@@ -59,7 +59,7 @@ export default function PricingPage() {
 		},
 		{
 			name: "Business",
-			price: 999,
+			price: 599,
 			cadence: "/yr",
 			blurb: "Unlimited operators, up to 3 forests/tenants.",
 			features: [
