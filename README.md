@@ -1,5 +1,5 @@
 
-# ADATT Pricing Page (Vite + React + TypeScript + Tailwind)
+# ADATT Tool Page (Vite + React + TypeScript + Tailwind)
 
 ## Quick start
 ```bash
