@@ -114,7 +114,7 @@ export default function PricingPage() {
 				<div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 					<div className="order-2 lg:order-1">
 						<h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
-							30-second secure offboarding for AD + Exchange Online
+							Automate Secure Employee Offboarding in Seconds, Not Hours
 						</h1>
 						<p className="mt-4 text-base sm:text-lg text-slate-300">
 							A PowerShell GUI that removes risk fast: group cleanup, GAL hide,
