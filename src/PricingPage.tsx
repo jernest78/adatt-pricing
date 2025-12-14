@@ -141,7 +141,7 @@ export default function PricingPage() {
 					</div>
 					<div className="order-1 lg:order-2">
 						<img 
-							src="/adatt-screenshot.PNG" 
+							src="/adatt-screenshot.png" 
 							alt="ADATT Application Interface" 
 							className="rounded-xl w-full shadow-2xl transition-transform duration-300 hover:scale-[1.02] cursor-pointer"
 							loading="eager"
