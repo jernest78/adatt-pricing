@@ -25,7 +25,7 @@ export default function PricingPage() {
 	const tiers = [
 		{
 			name: "Solo Admin",
-			price: 99,
+			price: 299,
 			cadence: "/yr",
 			blurb: "1 operator, 1 AD forest.",
 			features: [
@@ -43,7 +43,7 @@ export default function PricingPage() {
 		},
 		{
 			name: "Team",
-			price: 299,
+			price: 799,
 			cadence: "/yr",
 			blurb: "Up to 5 operators, 1 AD forest.",
 			features: [
@@ -59,7 +59,7 @@ export default function PricingPage() {
 		},
 		{
 			name: "Business",
-			price: 599,
+			price: 1999,
 			cadence: "/yr",
 			blurb: "Unlimited operators, up to 3 forests/tenants.",
 			features: [
@@ -141,11 +141,7 @@ export default function PricingPage() {
 					</div>
 					<div className="order-1 lg:order-2">
 						<img 
-							src="/adatt-screenshot.png" 
-							alt="ADATT Application Interface" 
-							className="rounded-xl w-full shadow-2xl transition-transform duration-300 hover:scale-[1.02] cursor-pointer"
-							loading="eager"
-						/>
+						src="/adatt-screenshot.JPG" 
 					</div>
 				</div>
 			</section>
