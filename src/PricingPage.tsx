@@ -76,36 +76,42 @@ export default function PricingPage() {
 	] as const;
 
 	return (
-		<div className="min-h-screen bg-gradient-to-b from-[#0E2430] to-[#102F3C] text-slate-100">
-			<header className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
-				<div className="flex items-center justify-between flex-wrap gap-4">
-					<div className="flex items-center gap-3">
-						<div className="h-10 w-10 rounded-2xl bg-[#4F46E5]/10 ring-1 ring-[#4F46E5]/30 grid place-content-center">
-							🔐
-						</div>
+		<div className="min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e1b4b] to-[#0f172a] text-slate-100 relative overflow-hidden">
+			{/* Animated gradient orbs */}
+			<div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+			<div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+			<div className="absolute top-1/2 left-1/2 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+			
+			<div className="relative z-10">
+				<header className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+					<div className="flex items-center justify-between flex-wrap gap-4">
+						<div className="flex items-center gap-3">
+							<div className="h-10 w-10 rounded-2xl bg-gradient-to-br from-purple-500 to-blue-600 ring-2 ring-purple-400/50 grid place-content-center shadow-lg shadow-purple-500/50">
+								🔐
+							</div>
 						<div className="text-xl font-semibold tracking-tight">ADATT</div>
 					</div>
-					<nav className="flex items-center gap-2 flex-wrap">
-						<a
-							href="#pricing"
-							className="rounded-xl px-3 sm:px-4 py-2 text-sm sm:text-base ring-1 ring-slate-600/60 hover:ring-slate-400/80 transition-all"
-						>
-							Pricing
-						</a>
-						<a
-							href="#faq"
-							className="rounded-xl px-3 sm:px-4 py-2 text-sm sm:text-base ring-1 ring-slate-600/60 hover:ring-slate-400/80 transition-all"
-						>
-							FAQ
-						</a>
-						<a
-							href="https://discord.com/channels/1422930170968543244/1422930171836502018"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="rounded-xl px-3 sm:px-4 py-2 text-sm sm:text-base ring-1 ring-slate-600/60 hover:ring-slate-400/80 transition-all"
-						>
-							Discord
-						</a>
+						<nav className="flex items-center gap-2 flex-wrap">
+							<a
+								href="#pricing"
+								className="rounded-xl px-3 sm:px-4 py-2 text-sm sm:text-base ring-1 ring-slate-600/60 hover:ring-purple-400/60 hover:bg-purple-500/10 transition-all"
+							>
+								Pricing
+							</a>
+							<a
+								href="#faq"
+								className="rounded-xl px-3 sm:px-4 py-2 text-sm sm:text-base ring-1 ring-slate-600/60 hover:ring-purple-400/60 hover:bg-purple-500/10 transition-all"
+							>
+								FAQ
+							</a>
+							<a
+								href="https://discord.com/channels/1422930170968543244/1422930171836502018"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="rounded-xl px-3 sm:px-4 py-2 text-sm sm:text-base ring-1 ring-slate-600/60 hover:ring-purple-400/60 hover:bg-purple-500/10 transition-all"
+							>
+								Discord
+							</a>
 					</nav>
 				</div>
 			</header>
@@ -146,6 +152,10 @@ export default function PricingPage() {
 						className="rounded-xl w-full shadow-2xl transition-transform duration-300 hover:scale-[1.02] cursor-pointer"
 						loading="eager"
 					/>
+				</div>
+			</div>
+		</section>
+
 			<section id="pricing" className="mx-auto max-w-6xl px-6 py-10">
 				<h2 className="text-3xl font-semibold">
 					Simple licensing. 30-day trial.
@@ -180,7 +190,7 @@ export default function PricingPage() {
 							</ul>
 							<a
 								href={t.href}
-								className="mt-6 inline-block rounded-xl bg-[#4F46E5] px-4 py-2 font-medium text-slate-100 hover:bg-[#6366F1]"
+								className="mt-6 inline-block rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-2 font-medium text-white hover:shadow-lg hover:shadow-purple-500/50 transition-all"
 							>
 								{t.cta}
 							</a>
@@ -188,14 +198,14 @@ export default function PricingPage() {
 					))}
 				</div>
 
-				<div className="mt-6 rounded-xl bg-slate-900/40 p-5 ring-1 ring-white/10">
-					<div className="font-medium">Enterprise</div>
-					<p className="text-sm text-slate-300">
-						Multi-forest/tenant, SSO packaging, custom policies. From $2,499/yr.
-					</p>
-					<a
-						href="mailto:adatt@unifosec.com?subject=ADATT%20Enterprise"
-						className="mt-3 inline-block rounded-xl px-4 py-2 ring-1 ring-slate-600/60 hover:ring-slate-400/80"
+<div className="mt-6 rounded-xl bg-gradient-to-br from-slate-900/40 via-purple-900/20 to-slate-900/40 p-5 ring-1 ring-purple-400/30 backdrop-blur-sm hover:ring-purple-400/60 transition-all">
+				<div className="font-medium">Enterprise</div>
+				<p className="text-sm text-slate-300">
+					Multi-forest/tenant, SSO packaging, custom policies. From $2,499/yr.
+				</p>
+				<a
+					href="mailto:adatt@unifosec.com?subject=ADATT%20Enterprise"
+					className="mt-3 inline-block rounded-xl px-4 py-2 ring-1 ring-purple-400/60 hover:ring-purple-400 hover:bg-purple-500/10 transition-all"
 					>
 						Talk to sales
 					</a>
@@ -223,18 +233,19 @@ export default function PricingPage() {
 					{faqs.map(({ q, a }) => (
 						<details
 							key={q}
-							className="rounded-xl bg-slate-900/40 p-5 ring-1 ring-white/10"
-						>
-							<summary className="cursor-pointer font-medium">{q}</summary>
-							<p className="mt-2 text-sm text-slate-300">{a}</p>
-						</details>
-					))}
-				</div>
-			</section>
+						className="rounded-xl bg-slate-900/40 p-5 ring-1 ring-white/10 hover:ring-purple-400/40 backdrop-blur-sm transition-all"
+					>
+						<summary className="cursor-pointer font-medium">{q}</summary>
+						<p className="mt-2 text-sm text-slate-300">{a}</p>
+					</details>
+				))}
+			</div>
+		</section>
 
-			<footer className="mx-auto max-w-6xl px-6 pb-16 text-sm text-slate-400">
-				© {new Date().getFullYear()} ADATT. All rights reserved.
-			</footer>
-		</div>
-	);
+		<footer className="mx-auto max-w-6xl px-6 pb-16 text-sm text-slate-400">
+			© {new Date().getFullYear()} ADATT. All rights reserved.
+		</footer>
+	</div>
+	</div>
+);
 }
