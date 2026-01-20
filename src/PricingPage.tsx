@@ -142,10 +142,10 @@ export default function PricingPage() {
 					<div className="order-1 lg:order-2">
 						<img 
 						src="/adatt-screenshot.JPG" 
-					</div>
-				</div>
-			</section>
-
+						alt="ADATT Application Interface" 
+						className="rounded-xl w-full shadow-2xl transition-transform duration-300 hover:scale-[1.02] cursor-pointer"
+						loading="eager"
+					/>
 			<section id="pricing" className="mx-auto max-w-6xl px-6 py-10">
 				<h2 className="text-3xl font-semibold">
 					Simple licensing. 30-day trial.
