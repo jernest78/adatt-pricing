@@ -27,15 +27,15 @@ export default function PricingPage() {
 			name: "Solo Admin",
 			price: 299,
 			cadence: "/yr",
-			blurb: "1 operator, 1 AD forest.",
+			blurb: "Perfect for individual system administrators. 1 operator, 1 AD forest.",
 			features: [
-				"30-day trial",
-				"AD + Exchange + Graph offboarding",
-				"Group cleanup + manager clear",
-				"Hide from GAL + mailbox to Shared",
+				"30-day free trial",
+				"AD + Exchange + Graph employee termination",
+				"Automated group cleanup + manager removal",
+				"Hide from GAL + convert mailbox to Shared",
 				"Auto-reply assistant",
-				"Device + MFA method removal",
-				"Audit log file",
+				"Microsoft 365 device + MFA removal",
+				"Complete audit log file",
 			],
 			cta: "Buy Solo",
 			href: getPlanHref("solo"),
@@ -45,7 +45,7 @@ export default function PricingPage() {
 			name: "Team",
 			price: 799,
 			cadence: "/yr",
-			blurb: "Up to 5 operators, 1 AD forest.",
+			blurb: "Ideal for IT teams and small MSPs. Up to 5 operators, 1 AD forest.",
 			features: [
 				"Everything in Solo",
 				"Priority support",
@@ -61,7 +61,7 @@ export default function PricingPage() {
 			name: "Business",
 			price: 1999,
 			cadence: "/yr",
-			blurb: "Unlimited operators, up to 3 forests/tenants.",
+			blurb: "For IT consulting firms and large MSPs. Unlimited operators, up to 3 forests/tenants.",
 			features: [
 				"Everything in Team",
 				"Unlimited operators",
@@ -119,50 +119,90 @@ export default function PricingPage() {
 			<section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
 				<div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 					<div className="order-2 lg:order-1">
-						<h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
-							Automate Secure Employee Offboarding in Seconds, Not Hours
-						</h1>
-						<p className="mt-4 text-base sm:text-lg text-slate-300">
-							A PowerShell GUI that removes risk fast: group cleanup, GAL hide,
-							mailbox to shared, auto-reply, Graph device & MFA removal, plus audit
-							logging.
-						</p>
-						<p className="mt-4 text-base sm:text-lg text-slate-200 font-medium leading-relaxed">
-							ADATT simplifies complex Active Directory and Microsoft 365 user management tasks, saving IT teams hours of manual work while ensuring consistent, compliant, and auditable user termination processes.
-						</p>
-						<div className="mt-6 flex flex-wrap gap-3">
-							<a
-								href="#pricing"
-								className="rounded-xl bg-[#4F46E5] px-5 py-3 text-sm sm:text-base font-medium text-slate-100 hover:bg-[#6366F1] transition-colors"
-							>
-								View pricing
-							</a>
-							<a
-								href="#how"
-								className="rounded-xl px-5 py-3 text-sm sm:text-base ring-1 ring-slate-600/60 hover:ring-slate-400/80 transition-all"
-							>
-								How it works
-							</a>
-						</div>
+					<h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-blue-400">
+						Continuous Offboarding
+					</h1>
+					<h2 className="mt-4 text-2xl sm:text-3xl font-semibold text-slate-100">
+						Automate Your Way
+					</h2>
+					<p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
+					The essential employee termination and offboarding tool for IT administrators, system admins, IT MSPs, and Microsoft administrators. Eliminate manual employee offboarding checklists, simplify security, risk, insider threat, compliance, and stay audit-ready with automated employee account deactivation workflows.
+					</p>
+					<form className="mt-6 flex flex-col sm:flex-row gap-3" onSubmit={(e) => { e.preventDefault(); alert('Email submitted: ' + e.currentTarget.email.value); }}>
+						<input
+							type="email"
+							name="email"
+							placeholder="Enter your email"
+							required
+							className="flex-1 rounded-xl px-4 py-3 text-slate-900 bg-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+						/>
+						<button type="submit" className="rounded-xl bg-pink-600 px-6 py-3 text-sm sm:text-base font-medium text-white hover:bg-pink-700 transition-colors shadow-lg hover:shadow-pink-500/50">
+							Get started
+						</button>
+					</form>
+				</div>
+				<div className="order-1 lg:order-2">
+					<div className="rounded-xl overflow-hidden shadow-2xl">
+						<iframe 
+							width="100%" 
+							height="315" 
+						src="https://www.youtube.com/embed/7XHabcxlRwg?si=9d_fb5BFvk_uYBgi&controls=1&modestbranding=1&rel=0" 
+							frameBorder="0" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+							referrerPolicy="strict-origin-when-cross-origin" 
+							allowFullScreen
+							className="w-full aspect-video"
+						></iframe>
 					</div>
-					<div className="order-1 lg:order-2">
-						<img 
-						src="/adatt-screenshot.JPG" 
-						alt="ADATT Application Interface" 
-						className="rounded-xl w-full shadow-2xl transition-transform duration-300 hover:scale-[1.02] cursor-pointer"
-						loading="eager"
-					/>
+					<div className="mt-4 text-center">
+						<span className="text-slate-300">or </span>
+						<a
+							href="mailto:adatt@unifosec.com?subject=ADATT%20Demo%20Request"
+							className="inline-block rounded-xl bg-green-600 px-6 py-2 text-sm sm:text-base font-medium text-white hover:bg-green-700 transition-colors shadow-lg hover:shadow-green-500/50"
+						>
+							Request a demo
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
 
-			<section id="pricing" className="mx-auto max-w-6xl px-6 py-10">
-				<h2 className="text-3xl font-semibold">
-					Simple licensing. 30-day trial.
+		{/* Companies Section */}
+		<section className="bg-slate-900 py-12">
+			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+				<h2 className="text-2xl sm:text-3xl font-semibold text-center text-slate-100 mb-8">
+					Trusted by IT Consulting Firms, MSPs, and System Administrators
 				</h2>
-				<p className="mt-2 text-slate-300">
-					Pick a plan. Taxes and invoices handled by Lemon Squeezy.
-				</p>
+				<div className="grid grid-cols-2 md:grid-cols-5 gap-6 items-center justify-items-center">
+					<button className="flex flex-col items-center justify-center h-32 w-full bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-xl p-4 hover:from-purple-600/30 hover:to-blue-600/30 transition-all border border-purple-400/30 hover:border-purple-400/60 shadow-lg hover:shadow-purple-500/50">
+						<div className="text-3xl mb-2">🚫</div>
+						<span className="text-sm font-semibold text-slate-100 text-center">Terminate User Access</span>
+					</button>
+					<button className="flex flex-col items-center justify-center h-32 w-full bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-xl p-4 hover:from-blue-600/30 hover:to-cyan-600/30 transition-all border border-blue-400/30 hover:border-blue-400/60 shadow-lg hover:shadow-blue-500/50">
+						<div className="text-3xl mb-2">📱</div>
+					<span className="text-sm font-semibold text-slate-100 text-center">Remove Registered Devices</span>
+					</button>
+					<button className="flex flex-col items-center justify-center h-32 w-full bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-xl p-4 hover:from-green-600/30 hover:to-emerald-600/30 transition-all border border-green-400/30 hover:border-green-400/60 shadow-lg hover:shadow-green-500/50">
+						<div className="text-3xl mb-2">🔐</div>
+						<span className="text-sm font-semibold text-slate-100 text-center">Reset MFA</span>
+					</button>				<button className="flex flex-col items-center justify-center h-32 w-full bg-gradient-to-br from-orange-600/20 to-amber-600/20 rounded-xl p-4 hover:from-orange-600/30 hover:to-amber-600/30 transition-all border border-orange-400/30 hover:border-orange-400/60 shadow-lg hover:shadow-orange-500/50">
+					<div className="text-3xl mb-2">🔓</div>
+					<span className="text-sm font-semibold text-slate-100 text-center">Sign Out Sessions from M365</span>
+				</button>					<button className="flex flex-col items-center justify-center h-32 w-full bg-gradient-to-br from-pink-600/20 to-rose-600/20 rounded-xl p-4 hover:from-pink-600/30 hover:to-rose-600/30 transition-all border border-pink-400/30 hover:border-pink-400/60 shadow-lg hover:shadow-pink-500/50">
+						<div className="text-3xl mb-2">👥</div>
+						<span className="text-sm font-semibold text-slate-100 text-center">Bulk Offboard<br/>(2-100 Max)</span>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="pricing" className="mx-auto max-w-6xl px-6 py-10">
+			<h2 className="text-3xl font-semibold">
+				Employee Offboarding Software Pricing for IT Admins
+			</h2>
+			<p className="mt-2 text-slate-300">
+				Flexible licensing for IT teams, system administrators, and MSPs. 30-day free trial included.
+			</p>
 
 				<div className="mt-8 grid gap-6 md:grid-cols-3">
 					{tiers.map((t) => (
@@ -213,22 +253,22 @@ export default function PricingPage() {
 			</section>
 
 			<section id="how" className="mx-auto max-w-6xl px-6 py-10">
-				<h2 className="text-3xl font-semibold">How activation works</h2>
-				<ol className="mt-4 list-decimal pl-6 text-slate-300">
-					<li>Buy a plan → receive a Lemon Squeezy license key.</li>
-					<li>
-						Open ADATT → Enter License → we activate the key once and return a
-						signed offline license file.
-					</li>
-					<li>
-						ADATT verifies the signature locally on every run. No constant internet
-						required.
-					</li>
-				</ol>
-			</section>
+			<h2 className="text-3xl font-semibold">How Our Employee Offboarding Tool Works</h2>
+			<ol className="mt-4 list-decimal pl-6 text-slate-300">
+				<li>Buy a plan → receive your license key for the offboarding software.</li>
+				<li>
+					Open ADATT → Enter License → we activate the key once and return a
+					signed offline license file.
+				</li>
+				<li>
+					ADATT verifies the signature locally on every run. No constant internet
+					required - perfect for secure IT environments.
+				</li>
+			</ol>
+		</section>
 
 			<section id="faq" className="mx-auto max-w-6xl px-6 py-10">
-				<h2 className="text-3xl font-semibold">FAQ</h2>
+				<h2 className="text-3xl font-semibold">Frequently Asked Questions - Employee Offboarding Software</h2>
 				<div className="mt-4 grid gap-4">
 					{faqs.map(({ q, a }) => (
 						<details
@@ -243,7 +283,8 @@ export default function PricingPage() {
 		</section>
 
 		<footer className="mx-auto max-w-6xl px-6 pb-16 text-sm text-slate-400">
-			© {new Date().getFullYear()} ADATT. All rights reserved.
+			<p className="mb-2">© {new Date().getFullYear()} ADATT - Employee Offboarding Automation Tool for IT Professionals</p>
+			<p className="text-xs text-slate-500">Keywords: IT Admin Tools | System Administrator Software | MSP Solutions | Microsoft 365 Management | Employee Termination | Account Deactivation | IT Consulting</p>
 		</footer>
 	</div>
 	</div>
