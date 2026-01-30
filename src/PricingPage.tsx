@@ -22,6 +22,53 @@ export const faqs = [
 ];
 
 export default function PricingPage() {
+	const [isSubmitting, setIsSubmitting] = React.useState(false);
+	const [submitStatus, setSubmitStatus] = React.useState<{
+		type: 'success' | 'error' | null;
+		message: string;
+	}>({ type: null, message: '' });
+
+	const handleEmailSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		setIsSubmitting(true);
+		setSubmitStatus({ type: null, message: '' });
+
+		const form = e.currentTarget;
+		const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+
+		try {
+			const response = await fetch('/api/subscribe', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({ email }),
+			});
+
+			const data = await response.json();
+
+			if (response.ok) {
+				setSubmitStatus({
+					type: 'success',
+					message: 'Thanks for subscribing! Check your email for updates.',
+				});
+				form.reset();
+			} else {
+				setSubmitStatus({
+					type: 'error',
+					message: data.error || 'Failed to subscribe. Please try again.',
+				});
+			}
+		} catch (error) {
+			setSubmitStatus({
+				type: 'error',
+				message: 'Network error. Please check your connection and try again.',
+			});
+		} finally {
+			setIsSubmitting(false);
+		}
+	};
+
 	const tiers = [
 		{
 			name: "Solo Admin",
@@ -128,18 +175,28 @@ export default function PricingPage() {
 					<p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
 					The essential employee termination and offboarding tool for IT administrators, system admins, IT MSPs, and Microsoft administrators. Eliminate manual employee offboarding checklists, simplify security, risk, insider threat, compliance, and stay audit-ready with automated employee account deactivation workflows.
 					</p>
-					<form className="mt-6 flex flex-col sm:flex-row gap-3" onSubmit={(e) => { e.preventDefault(); alert('Email submitted: ' + e.currentTarget.email.value); }}>
+					<form className="mt-6 flex flex-col sm:flex-row gap-3" onSubmit={handleEmailSubmit}>
 						<input
 							type="email"
 							name="email"
 							placeholder="Enter your email"
 							required
-							className="flex-1 rounded-xl px-4 py-3 text-slate-900 bg-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+							disabled={isSubmitting}
+							className="flex-1 rounded-xl px-4 py-3 text-slate-900 bg-white focus:outline-none focus:ring-2 focus:ring-pink-500 disabled:opacity-50 disabled:cursor-not-allowed"
 						/>
-						<button type="submit" className="rounded-xl bg-pink-600 px-6 py-3 text-sm sm:text-base font-medium text-white hover:bg-pink-700 transition-colors shadow-lg hover:shadow-pink-500/50">
-							Get started
+						<button 
+							type="submit" 
+							disabled={isSubmitting}
+							className="rounded-xl bg-pink-600 px-6 py-3 text-sm sm:text-base font-medium text-white hover:bg-pink-700 transition-colors shadow-lg hover:shadow-pink-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
+						>
+							{isSubmitting ? 'Submitting...' : 'Get started'}
 						</button>
 					</form>
+					{submitStatus.type && (
+						<div className={`mt-3 text-sm ${submitStatus.type === 'success' ? 'text-green-400' : 'text-red-400'}`}>
+							{submitStatus.message}
+						</div>
+					)}
 				</div>
 				<div className="order-1 lg:order-2">
 					<div className="rounded-xl overflow-hidden shadow-2xl">
